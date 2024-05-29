@@ -1,9 +1,9 @@
 #include <benchmark/benchmark.h>
 #include <Eigen/Core>
 #include <Eigen/Geometry>
-#include "UKF/Types.h"
-#include "UKF/Integrator.h"
-#include "UKF/StateVector.h"
+#include "ukf/Types.h"
+#include "ukf/Integrator.h"
+#include "ukf/StateVector.h"
 
 using SV16_FourQuaternions = UKF::StateVector<
     UKF::Field<1, UKF::Quaternion>,

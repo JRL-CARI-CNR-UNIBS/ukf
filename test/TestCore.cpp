@@ -2,11 +2,11 @@
 #include <Eigen/Core>
 #include <Eigen/Geometry>
 #include <cmath>
-#include "UKF/Types.h"
-#include "UKF/Integrator.h"
-#include "UKF/StateVector.h"
-#include "UKF/MeasurementVector.h"
-#include "UKF/Core.h"
+#include "ukf/Types.h"
+#include "ukf/Integrator.h"
+#include "ukf/StateVector.h"
+#include "ukf/MeasurementVector.h"
+#include "ukf/Core.h"
 #include "comparisons.h"
 
 /* Set up state vector class. */

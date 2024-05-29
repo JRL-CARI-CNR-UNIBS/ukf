@@ -28,8 +28,8 @@ SOFTWARE.
 #include <cstddef>
 #include <utility>
 #include <Eigen/Core>
-#include "UKF/Types.h"
-#include "UKF/Integrator.h"
+#include "ukf/Types.h"
+#include "ukf/Integrator.h"
 
 namespace UKF {
 

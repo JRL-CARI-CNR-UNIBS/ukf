@@ -1,11 +1,11 @@
 #include <Eigen/Core>
 #include <Eigen/Geometry>
 #include <cmath>
-#include "UKF/Types.h"
-#include "UKF/Integrator.h"
-#include "UKF/StateVector.h"
-#include "UKF/MeasurementVector.h"
-#include "UKF/Core.h"
+#include "ukf/Types.h"
+#include "ukf/Integrator.h"
+#include "ukf/StateVector.h"
+#include "ukf/MeasurementVector.h"
+#include "ukf/Core.h"
 #include "ahrs.h"
 
 /*
@@ -246,7 +246,7 @@ void ukf_init() {
     ahrs_errors.measurement_root_covariance << ahrs.measurement_root_covariance;
 
     /*
-    Set bias error process noise – this is derived from bias instability.
+    Set bias error process noise – this is derived from bias instability.
 
     Bias instability is actually characterised as a 1/f flicker noise rather
     than the white noise (which is what we're specifying using the process
@@ -374,7 +374,7 @@ void ukf_iterate(float dt) {
 
             /* Clip parameters to physically reasonable values. */
             ahrs_errors.state.set_field<MagneticFieldNorm>(
-                std::max(0.2f, std::min(0.7f, ahrs_errors.state.get_field<MagneticFieldNorm>())));
+                std::max(0.2, std::min(0.7, ahrs_errors.state.get_field<MagneticFieldNorm>())));
 
             UKF::Vector<3> temp;
             temp = ahrs_errors.state.get_field<AccelerometerBias>();
@@ -383,10 +383,11 @@ void ukf_iterate(float dt) {
             temp[2] = std::max(real_t(-G_ACCEL/4.0), std::min(real_t(G_ACCEL/4.0), temp[2]));
             ahrs_errors.state.set_field<AccelerometerBias>(temp);
 
+
             temp = ahrs_errors.state.get_field<MagnetometerScaleFactor>();
-            temp[0] = std::max(real_t(0.5f), std::min(2.0f, temp[0]));
-            temp[1] = std::max(real_t(0.5f), std::min(2.0f, temp[1]));
-            temp[2] = std::max(real_t(0.5f), std::min(2.0f, temp[2]));
+            temp[0] = std::max(real_t(0.5), std::min(2.0, temp[0]));
+            temp[1] = std::max(real_t(0.5), std::min(2.0, temp[1]));
+            temp[2] = std::max(real_t(0.5), std::min(2.0, temp[2]));
             ahrs_errors.state.set_field<MagnetometerScaleFactor>(temp);
 
             step = 0;

@@ -1,9 +1,9 @@
 #include <gtest/gtest.h>
 #include <Eigen/Core>
 #include <Eigen/Geometry>
-#include "UKF/Types.h"
-#include "UKF/Integrator.h"
-#include "UKF/StateVector.h"
+#include "ukf/Types.h"
+#include "ukf/Integrator.h"
+#include "ukf/StateVector.h"
 #include "comparisons.h"
 
 enum MyFields {
@@ -278,7 +278,7 @@ TEST(StateVectorTest, SmallAlphaSigmaPoints) {
 }
 
 /*
-These are linear, but they don't have to be – just makes it easier to
+These are linear, but they don't have to be – just makes it easier to
 calculate the predicted output.
 */
 

@@ -25,8 +25,8 @@ SOFTWARE.
 
 #include <Eigen/Core>
 #include <Eigen/Geometry>
-#include "UKF/Types.h"
-#include "UKF/StateVector.h"
+#include "ukf/Types.h"
+#include "ukf/StateVector.h"
 
 namespace UKF {
 

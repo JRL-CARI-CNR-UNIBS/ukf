@@ -1,11 +1,11 @@
 #include <benchmark/benchmark.h>
 #include <Eigen/Core>
 #include <Eigen/Geometry>
-#include "UKF/Types.h"
-#include "UKF/Integrator.h"
-#include "UKF/StateVector.h"
-#include "UKF/MeasurementVector.h"
-#include "UKF/Core.h"
+#include "ukf/Types.h"
+#include "ukf/Integrator.h"
+#include "ukf/StateVector.h"
+#include "ukf/MeasurementVector.h"
+#include "ukf/Core.h"
 
 /*
 Set up state vector class. The order of these is changed to prevent

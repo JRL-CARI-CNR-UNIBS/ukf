@@ -23,7 +23,7 @@ SOFTWARE.
 #ifndef INTEGRATOR_H_
 #define INTEGRATOR_H_
 
-#include "UKF/Config.h"
+#include "ukf/Config.h"
 
 namespace UKF {
 

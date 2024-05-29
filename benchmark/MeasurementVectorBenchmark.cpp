@@ -1,9 +1,9 @@
 #include <benchmark/benchmark.h>
 #include <Eigen/Core>
 #include <Eigen/Geometry>
-#include "UKF/Types.h"
-#include "UKF/StateVector.h"
-#include "UKF/MeasurementVector.h"
+#include "ukf/Types.h"
+#include "ukf/StateVector.h"
+#include "ukf/MeasurementVector.h"
 
 enum MyStateVectorFields {
     AngularVelocity,
