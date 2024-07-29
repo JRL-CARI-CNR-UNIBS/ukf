@@ -1,58 +1,46 @@
-*.py[cod]
-.DS_Store
 
-# C extensions
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
 *.so
 *.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
 *.a
-a.out
+*.lib
 
-# Packages
-*.egg
-*.egg-info
-dist
-build
-eggs
-parts
-var
-sdist
-develop-eggs
-.installed.cfg
-lib64
-Debug
-Release
+# Executables
+*.exe
+*.out
+*.app
 
-# Installer logs
-pip-log.txt
+*~
+*txt.user*
+*kdev4*
 
-# Unit test / coverage reports
-.coverage
-.tox
-nosetests.xml
+build/
+devel/
+Testing/
+.cache/
+.vscode/
 
-# Translations
-*.mo
+compile_commands.json
 
-# Mr Developer
-.mr.developer.cfg
-.pydevproject
-
-# LaTeX
-*.synctex.gz
-*.aux
-*.log
-
-# Symlink to dynamic library for development
-python/ukf/c
-python/ukf/ccs-c66x
-
-# Cmake junk
-CMakeFiles
-*.cmake
-CMakeCache.txt
-src/googletest
-src/eigen3*
-src/*.gz
-Makefile
-test/src/googletest*
-tmp

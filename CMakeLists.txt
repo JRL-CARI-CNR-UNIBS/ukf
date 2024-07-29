@@ -52,7 +52,7 @@ target_compile_definitions(ukf
   INTERFACE
   )
 target_link_libraries(ukf INTERFACE Eigen3::Eigen)
-target_compile_definitions(ukf INTERFACE -DEIGEN_NO_MALLOC -DUKF_DOUBLE_PRECISION )
+target_compile_definitions(ukf INTERFACE -DEIGEN_NO_MALLOC )
 add_library(ukf::ukf ALIAS ukf)
 target_compile_features(ukf INTERFACE cxx_std_17)
 
